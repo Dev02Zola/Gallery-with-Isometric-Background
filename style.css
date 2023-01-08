@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #4700aa;
+    overflow: hidden;
+}
+#text{
+    position: absolute;
+    color: #fff;
+    font-weight: 700;
+    font-size: 12em;
+    line-height: 0.9em;
+    letter-spacing: 2px;
+    text-align: center;
+    transform: rotate(-28deg) skew(25deg);
+}
+#text:before{
+    content: attr(data-text);
+    position: absolute;
+    top: 30px;
+    left: -30px;
+    color: rgb(0, 0, 0);
+    text-shadow: none;
+    filter: blur(8px);
+    z-index: -1;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallery{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-box{
+    width: 100px;
+    height: 500px;
+    margin: 10px;
+    border-radius: 50px;
+    background: url(img/zola.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    flex-wrap: wrap;
+    transition: width 0.5s;
+    box-shadow: 0 20px 30px rgb(3, 3, 3);
+}
+.img-box:nth-child(2){
+    background: url(img/super-woman-ge54743ee7_1920.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img-box:nth-child(3){
+    background: url(img/ladybugs.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img-box:nth-child(4){
+    background: url(img/office.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img-box:nth-child(5){
+    background: url(img/robot.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img-box:nth-child(6){
+    background: url(img/brazil.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img-box:nth-child(7){
+    background: url(img/eiffel-tower.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img-box h3{
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+.img-box:hover{
+    width: 300px;
+    cursor: pointer;
+}
+.img-box:hover h3{
+    opacity: 1;
+    bottom: 25px;
+}
